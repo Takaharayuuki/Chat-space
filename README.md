@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 
-##DB設計
+# DB設計
 
 groups_usersテーブル
 
@@ -33,6 +33,6 @@ groups_usersテーブル
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-###Association
+# Association
 - belongs_to :group
 - belongs_to :user
