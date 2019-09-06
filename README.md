@@ -40,7 +40,7 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
+|body|text|null: false|
 |image|string|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
@@ -49,7 +49,7 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :group
 
-##groupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |groupname|text|null: false|
@@ -57,7 +57,7 @@ Things you may want to cover:
 - has_many :messages
 - has_many :users,  through: :groups_users
 
-##groups_usersテーブル
+## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
