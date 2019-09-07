@@ -1,0 +1,83 @@
+%div.flash-box
+  %p グループを作成しました
+
+%div.wrapper
+
+  %div.chat-side
+
+    %div.side-header
+
+      %p.side-header__box
+
+        %p.side_header__box__user-name
+          TEST-user
+          %ul.side_header__box__menu
+
+            %li.side_header__box__menu__new-group
+              %a{href: '#'}
+                %i.fa.fa-edit
+            %li.side_header__box__menu__edit-user
+              %a{href: '#'}
+                %i.fa.fa-cog
+              
+    %div.groups
+
+      %div.group
+
+        %p.group__group-name
+          test-group
+
+        %p.group__latest-message
+          さようなら！
+        
+      %div.group
+
+        %p.group__group-name
+          sample-group
+
+        %p.group__latest-message
+          hello！
+        
+      %div.group
+
+        %p.group__group-name
+          example
+
+        %p.group__latest-message
+          まだメッセージがありません
+
+  %div.chat-main
+
+    %div.main-header
+      %div.main-header__left-box
+        %h2.main-header__left-box__current-group
+          test
+        %ul.main-header__left-box__member-list
+          Member: 
+          %li.main-header__left-box__member-list__member
+          testname
+
+      %a{href: '#'}
+        %div.main-header__edit-btn
+          Edit
+
+    %div.messages
+      %div.message
+        %div.message__upper-info
+          %p.message__upper-info__talker
+            testest
+          %p.message__upper-info__date
+            2019/09/07/(sat)18:27:31
+        %p.message__text
+          testtett
+
+    %div.form
+      %form.new_message{}
+        %input{}
+        %input{}
+        %div.input-box
+          %input.input-box__text{}
+          %label.input-box__image{}
+            %i.fe.fa-image
+            %input.input-box__image__file
+        %input{}
