@@ -7,18 +7,17 @@
 
     %div.side-header
 
-      %p.side-header__box
-
-        %p.side_header__box__user-name
+      %div.side-header__box
+        %p.side-header__box__user-name
           TEST-user
-          %ul.side_header__box__menu
+        %ul.side-header__box__menu
 
-            %li.side_header__box__menu__new-group
-              %a{href: '#'}
-                %i.fa.fa-edit
-            %li.side_header__box__menu__edit-user
-              %a{href: '#'}
-                %i.fa.fa-cog
+          %li.side-header__box__menu__new-group
+            %a{href: '#'}
+              %i.fa.fa-edit
+          %li.side-header__box__menu__edit-user
+            %a{href: '#'}
+              %i.fa.fa-cog
               
     %div.groups
 
@@ -65,19 +64,26 @@
       %div.message
         %div.message__upper-info
           %p.message__upper-info__talker
-            testest
+            仮免太郎
           %p.message__upper-info__date
             2019/09/07/(sat)18:27:31
         %p.message__text
-          testtett
+          こんにちは！
+      
+      %div.message
+        %div.message__upper-info
+          %p.message__upper-info__talker
+            test太郎
+          %p.message__upper-info__date
+            2019/09/07/(sat)18:27:31
+        %p.message__text
+          おはようございます！
 
     %div.form
       %form.new_message{}
-        %input{}
-        %input{}
         %div.input-box
-          %input.input-box__text{}
-          %label.input-box__image{}
-            %i.fe.fa-image
-            %input.input-box__image__file
-        %input{}
+          %input.input-box__text{placeholder: "type a message" }
+            %label.input-box__image{for: "message_image"}
+              %i.fa.fa-image
+              %input.input-box__image__file{type: "file", name: "message[image]"}
+        %input.submit-btn{type: "submit", name: "commit",value: "Send",}
