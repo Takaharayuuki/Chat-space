@@ -1,13 +1,13 @@
-%div.flash-box
+.flash-box
   %p グループを作成しました
 
-%div.wrapper
+.wrapper
 
-  %div.chat-side
+  .chat-side
 
-    %div.side-header
+    .side-header
 
-      %div.side-header__box
+      .side-header__box
         %p.side-header__box__user-name
           TEST-user
         %ul.side-header__box__menu
@@ -19,9 +19,9 @@
             %a{href: '#'}
               %i.fa.fa-cog
               
-    %div.groups
+    .groups
 
-      %div.group
+      .group
 
         %p.group__group-name
           test-group
@@ -29,7 +29,7 @@
         %p.group__latest-message
           さようなら！
         
-      %div.group
+      .group
 
         %p.group__group-name
           sample-group
@@ -37,7 +37,7 @@
         %p.group__latest-message
           hello！
         
-      %div.group
+      .group
 
         %p.group__group-name
           example
@@ -45,10 +45,10 @@
         %p.group__latest-message
           まだメッセージがありません
 
-  %div.chat-main
+  .chat-main
 
-    %div.main-header
-      %div.main-header__left-box
+    .main-header
+      .main-header__left-box
         %h2.main-header__left-box__current-group
           test
         %ul.main-header__left-box__member-list
@@ -60,18 +60,17 @@
         %div.main-header__edit-btn
           Edit
 
-    %div.messages
-      %div.message
-        %div.message__upper-info
+    .messages
+      .message
+        .message__upper-info
           %p.message__upper-info__talker
             仮免太郎
           %p.message__upper-info__date
-            2019/09/07/(sat)18:27:31
-        %p.message__text
-          こんにちは！
-      
-      %div.message
-        %div.message__upper-info
+            2018/09/07/(sat)18:27:31
+          %p.message__text
+            こんにちは！
+      .message
+        .message__upper-info
           %p.message__upper-info__talker
             test太郎
           %p.message__upper-info__date
@@ -79,9 +78,9 @@
         %p.message__text
           おはようございます！
 
-    %div.form
+    .form
       %form.new_message{}
-        %div.input-box
+        .input-box
           %input.input-box__text{placeholder: "type a message" }
             %label.input-box__image{for: "message_image"}
               %i.fa.fa-image

@@ -3,9 +3,9 @@
 }
 
 .flash-box {
-  background-color: #38AEF0;
+  background-color: $link-color;
   text-align: center;
-  color: #ffffff;
+  color: $white;
   display: block;
 }
 
@@ -15,7 +15,7 @@
   display: block;
   .chat-side {
     width:300px;
-    color: #fff;
+    color: $white;
     float: left;
     .side-header {
       background-color: #253141;
@@ -98,7 +98,7 @@
         line-height: 40px;
         padding: 0 20px;
         margin-top: 30px;
-        border: solid 1px #38aef0;
+        border: solid 1px $link-color;
         position: absolute;
         right: 40px;
 
@@ -168,8 +168,8 @@
           height: 50px;
           padding: 0 30px;
           margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
+          background-color: $link-color;
+          color: $white;
           cursor: pointer;
         }
       }
