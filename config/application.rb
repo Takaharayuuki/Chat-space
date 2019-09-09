@@ -12,6 +12,7 @@ module ChatSpace
       g.stylesheets false
       g.javascripts false
       g.helper false
-      g.test_framework falserb files in that directory are automatically loaded.
+      g.test_framework false
+    end
   end
 end
