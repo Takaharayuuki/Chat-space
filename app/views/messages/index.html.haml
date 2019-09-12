@@ -13,10 +13,10 @@
         %ul.side-header__box__menu
 
           %li.side-header__box__menu__new-group
-            %a{href: '#'}
+            = link_to "#" do
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{href: '#'}
+            = link_to "#" do
               %i.fa.fa-cog
               
     .groups
@@ -56,7 +56,7 @@
           %li.main-header__left-box__member-list__member
           testname
 
-      %a{href: '#'}
+      = link_to "#" do
         %div.main-header__edit-btn
           Edit
 
@@ -82,7 +82,7 @@
       %form.new_message{}
         .input-box
           %input.input-box__text{placeholder: "type a message" }
-            %label.input-box__image{for: "message_image"}
+            %label.input-box__image{for: "message_image", } 
               %i.fa.fa-image
-              %input.input-box__image__file{type: "file", name: "message[image]"}
+              %input.input-box__image__file{type: "file", name: "message[image]", id: "message_image"}
         %input.submit-btn{type: "submit", name: "commit",value: "Send",}
