@@ -48,28 +48,14 @@
           Edit
 
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__talker
-            仮免太郎
-          %p.message__upper-info__date
-            2018/09/07/(sat)18:27:31
-          %p.message__text
-            こんにちは！
-      .message
-        .message__upper-info
-          %p.message__upper-info__talker
-            test太郎
-          %p.message__upper-info__date
-            2019/09/07/(sat)18:27:31
-        %p.message__text
-          おはようございます！
+      = render @messages
+      
 
     .form
-      %form.new_message{}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: "input-box__text", placeholder: "type a message" 
         .input-box
-          %input.input-box__text{placeholder: "type a message" }
-            %label.input-box__image{for: "message_image", } 
-              %i.fa.fa-image
-              %input.input-box__image__file{type: "file", name: "message[image]", id: "message_image"}
-        %input.submit-btn{type: "submit", name: "commit",value: "Send",}
+          = f.label :image, class: "input-box__image" do
+            = fa_icon 'picture-o', class: "fa fa-image"
+            = f.file_field :image, class: "input-box__image__file"
+        = f.submit 'send', class: 'submit-btn' 
