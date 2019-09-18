@@ -2,6 +2,11 @@
   box-sizing: border-box
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .flash-box {
   background-color: $link-color;
   text-align: center;
@@ -34,12 +39,15 @@
           margin: 0 0 0 auto;
           &__new-group{
             margin-left: 0.3rem;
+            font-size: 1rem;
             .fa .fa-edit {
               display: inline-block;
+              font-size: 2em;
             }
           }
           &__edit-user{
             margin-left: 0.3rem;
+            font-size: 1rem;
             .fa .fa-cog {
               display: inline-block;
             }
@@ -57,11 +65,12 @@
           font-size: 15px;
           font-weight: bold;
           margin-bottom: 5px;
+
         }
         &__latest-message {
           font-size: 11px;
           font-weight: bold;
-  
+          margin-bottom: 40px;
         }
       }
     }
@@ -101,7 +110,7 @@
         border: solid 1px $link-color;
         position: absolute;
         right: 40px;
-
+        color: $link-color;
       }
     }
     .messages {
@@ -156,7 +165,7 @@
             cursor: pointer;
             .fa .fa-image {
               display: inline-block;
-
+              
             }
             &__file {
               display: none;

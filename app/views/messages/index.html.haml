@@ -1,7 +1,7 @@
 .flash-box
 
 .wrapper
-
+  
   .chat-side
 
     .side-header
@@ -18,30 +18,31 @@
           %li.side-header__box__menu__edit-user
             = link_to edit_user_path(current_user) do
               %i.fa.fa-cog
-              
+                
     .groups
-
+      
       .group
         - current_user.groups.each do |group|
-          = link_to '#' do
+          = link_to group_messages_path(group) do
             .group__group-name
               = group.name
-
             .group__latest-message
-              メッセージはまだありません。
-        
+              = group.show_last_message
+
+  
       
 
   .chat-main
 
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group
-          test
-        %ul.main-header__left-box__member-list
-          Member: 
-          %li.main-header__left-box__member-list__member
-          testname
+        - @group.group_users.each do |group_user|
+          %h2.main-header__left-box__current-group
+            = group_user.group.name
+          %ul.main-header__left-box__member-list
+            Member:
+            %li.main-header__left-box__member-list__member
+              = group_user.user.name
 
       = link_to "#" do
         %div.main-header__edit-btn
@@ -53,8 +54,8 @@
 
     .form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: "input-box__text", placeholder: "type a message" 
         .input-box
+          = f.text_field :content, class: "input-box__text", placeholder: "type a message" 
           = f.label :image, class: "input-box__image" do
             = fa_icon 'picture-o', class: "fa fa-image"
             = f.file_field :image, class: "input-box__image__file"
