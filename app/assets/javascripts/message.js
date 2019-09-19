@@ -26,7 +26,7 @@ $(document).on('turbolinks:load', function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var message = new FormData(this);
-    var url = (window.location.href); // $(this).attr('action')でも可能です
+    var url = (window.location.href);
     $.ajax({  
       url: url,
       type: 'POST',
@@ -53,7 +53,7 @@ $(document).on('turbolinks:load', function(){
     alert('エラーが発生したためメッセージは送信できませんでした。');
   })
   .always(function(data){
-    $('.submit-btn').prop('disabled', false);//ここで解除している
+    $('.submit-btn').prop('disabled', false);
   })
 })
 });
