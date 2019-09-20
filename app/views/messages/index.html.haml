@@ -42,10 +42,11 @@
           %ul.main-header__left-box__member-list
             Member:
             %li.main-header__left-box__member-list__member
-              = group_user.user.name
+            - @group.users.each do |user|
+              = user.name
         
       .main-header__edit-btn
-        = link_to "Edit", edit_group_path(@group.id)   
+        = link_to "Edit", edit_group_path(@group.id) ,class: "button" 
           
         
           
