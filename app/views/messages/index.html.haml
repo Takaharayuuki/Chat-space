@@ -37,7 +37,7 @@
     .main-header
       .main-header__left-box
         - @group.group_users.each do |group_user|
-          %h2.main-header__left-box__current-group
+          %h2.main-header__left-box__current-group{"data-group-id": "#{@group.id}"}
             = group_user.group.name
           %ul.main-header__left-box__member-list
             Member:
