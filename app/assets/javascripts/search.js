@@ -24,37 +24,37 @@ $(function () {
 }
 
 $(function () {
-    $(".chat-group-form__input").on("keyup", function () {
-        var input = $("#user-search-field").val();
-        $.ajax({
-            type: 'GET',
-            url: '/users',
-            data: { keyword: input },
-            dataType: 'json'
-        })
-        .done(function (members) {
-            $("#user_search_result").empty();
-            if (members.length !== 0) {
-                members.forEach(function (user) {
-                    appendUsers(user);
-                })
-              }
-            })
-            .fail(function () {
-                alert('ユーザー検索に失敗しました');
-            });
-        });
-    });
+  $(".chat-group-form__input").on("keyup", function () {
+      var input = $("#user-search-field").val();
+      $.ajax({
+          type: 'GET',
+          url: '/users',
+          data: { keyword: input },
+          dataType: 'json'
+      })
+      .done(function (members) {
+          $("#user_search_result").empty();
+          if (members.length !== 0) {
+              members.forEach(function (user) {
+                  appendUsers(user);
+              })
+            }
+          })
+          .fail(function () {
+              alert('ユーザー検索に失敗しました');
+          });
+      });
+  });
 
-    $(function () {
-        $(document).on("click", '.user_search_add', function () {
-            var name = $(this).attr("data-user-name");
-            var user_id = $(this).attr("data-user-id");
-            $(this).parent().remove();
-            appendMembers(name, user_id);
-        });
-        $(document).on("click", '.user_search_remove', function () {
-            $(this).parent().remove();
-        });
-    });
+  $(function () {
+      $(document).on("click", '.user_search_add', function () {
+          var name = $(this).attr("data-user-name");
+          var user_id = $(this).attr("data-user-id");
+          $(this).parent().remove();
+          appendMembers(name, user_id);
+      });
+      $(document).on("click", '.user_search_remove', function () {
+          $(this).parent().remove();
+      });
+  });
 });
