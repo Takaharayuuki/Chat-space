@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.1"
 
-set :application, "chat-space"
+set :application, "Chat-space"
 
 set :repo_url, 'git@github.com:Takaharayuuki/Chat-space.git'
 
